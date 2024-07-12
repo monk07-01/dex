@@ -21,7 +21,7 @@ import (
 	"github.com/crypto-org-chain/chain-main/v4/app"
 	nftcli "github.com/crypto-org-chain/chain-main/v4/x/nft/client/cli"
 	nfttestutil "github.com/crypto-org-chain/chain-main/v4/x/nft/client/testutil"
-	nfttypes "github.com/crypto-org-chain/chain-main/v4/x/nft/types"
+	nfttypes "github.com/JTG947/dex/x/coinfactory/types"
 )
 
 type IntegrationTestSuite struct {
