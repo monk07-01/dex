@@ -53,7 +53,10 @@ import (
 	ibcexported "github.com/cosmos/ibc-go/v8/modules/core/exported"
 	"google.golang.org/protobuf/types/known/durationpb"
 
+	coinfactorymodulev1 "dex/api/dex/coinfactory/module"
 	dexmodulev1 "dex/api/dex/dex/module"
+	_ "dex/x/coinfactory/module" // import for side-effects
+	coinfactorymoduletypes "dex/x/coinfactory/types"
 	_ "dex/x/dex/module" // import for side-effects
 	dexmoduletypes "dex/x/dex/types"
 	// this line is used by starport scaffolding # stargate/app/moduleImport
@@ -94,6 +97,7 @@ var (
 		circuittypes.ModuleName,
 		// chain modules
 		dexmoduletypes.ModuleName,
+		coinfactorymoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/initGenesis
 	}
 
@@ -119,6 +123,7 @@ var (
 		ibcfeetypes.ModuleName,
 		// chain modules
 		dexmoduletypes.ModuleName,
+		coinfactorymoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/beginBlockers
 	}
 
@@ -138,6 +143,7 @@ var (
 		ibcfeetypes.ModuleName,
 		// chain modules
 		dexmoduletypes.ModuleName,
+		coinfactorymoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/endBlockers
 	}
 
@@ -158,6 +164,7 @@ var (
 		{Account: ibctransfertypes.ModuleName, Permissions: []string{authtypes.Minter, authtypes.Burner}},
 		{Account: ibcfeetypes.ModuleName},
 		{Account: icatypes.ModuleName},
+		{Account: coinfactorymoduletypes.ModuleName, Permissions: []string{authtypes.Minter, authtypes.Burner, authtypes.Staking}},
 		// this line is used by starport scaffolding # stargate/app/maccPerms
 	}
 
@@ -296,6 +303,10 @@ var (
 			{
 				Name:   dexmoduletypes.ModuleName,
 				Config: appconfig.WrapAny(&dexmodulev1.Module{}),
+			},
+			{
+				Name:   coinfactorymoduletypes.ModuleName,
+				Config: appconfig.WrapAny(&coinfactorymodulev1.Module{}),
 			},
 			// this line is used by starport scaffolding # stargate/app/moduleConfig
 		},
