@@ -45,10 +45,6 @@ func NftKeeper(t testing.TB) (keeper.Keeper, sdk.Context) {
 
 	ctx := sdk.NewContext(stateStore, cmtproto.Header{}, false, log.NewNopLogger())
 
-	// Initialize params
-	if err := k.SetParams(ctx, types.DefaultParams()); err != nil {
-		panic(err)
-	}
 
 	return k, ctx
 }

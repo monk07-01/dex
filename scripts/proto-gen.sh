@@ -33,5 +33,6 @@ done
 cd ..
 
 # move proto files to the right places
-cp -r github.com/monk07-01/dex/x/* ./
+cp -r github.com/monk07-01/dex/x/* x/
 rm -rf github.com
+#go mod tidy

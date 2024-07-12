@@ -5,7 +5,7 @@ package keeper
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/monk07-01/x/coinfactory/types"
+	"github.com/monk07-01/dex/x/nft/types"
 )
 
 // GetOwner gets all the ID collections owned by an address and denom ID

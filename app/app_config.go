@@ -55,7 +55,7 @@ import (
 
 	coinfactorymodulev1 "dex/api/dex/nft/module"
 	dexmodulev1 "dex/api/dex/dex/module"
-	_ "dex/x/nft/module" // import for side-effects
+	_ "dex/x/nft" // import for side-effects
 	coinfactorymoduletypes "dex/x/nft/types"
 	_ "dex/x/dex/module" // import for side-effects
 	dexmoduletypes "dex/x/dex/types"
