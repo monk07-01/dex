@@ -1,5 +1,3 @@
-// Copyright (c) 2016-2021 Shanghai Bianjie AI Technology Inc. (licensed under the Apache License, Version 2.0)
-// Modifications Copyright (c) 2021-present Crypto.org (licensed under the Apache License, Version 2.0)
 package testutil
 
 import (
@@ -16,7 +14,7 @@ import (
 	simtestutil "github.com/cosmos/cosmos-sdk/testutil/sims"
 
 	"github.com/monk07-01/dex/app"
-	nftcli "github.com/crypto-org-chain/chain-main/v4/x/nft/client/cli"
+	nftcli "github.com/monk07-01/dex/x/nft/client/cli"
 
 	dbm "github.com/cometbft/cometbft-db"
 	servertypes "github.com/cosmos/cosmos-sdk/server/types"

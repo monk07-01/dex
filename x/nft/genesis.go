@@ -1,10 +1,12 @@
-package coinfactory
+// Copyright (c) 2016-2021 Shanghai Bianjie AI Technology Inc. (licensed under the Apache License, Version 2.0)
+// Modifications Copyright (c) 2021-present Crypto.org (licensed under the Apache License, Version 2.0)
+package nft
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github/com/dex/x/nft/keeper"
-	"github.com/dex/x/nft/types"
+	"github.com/crypto-org-chain/chain-main/v4/x/nft/keeper"
+	"github.com/crypto-org-chain/chain-main/v4/x/nft/types"
 )
 
 // InitGenesis stores the NFT genesis.
@@ -13,7 +15,7 @@ func InitGenesis(ctx sdk.Context, k keeper.Keeper, data types.GenesisState) {
 		panic(err.Error())
 	}
 
-	for _, c := range data.Collection {
+	for _, c := range data.Collections {
 		if err := k.SetDenom(ctx, c.Denom); err != nil {
 			panic(err)
 		}

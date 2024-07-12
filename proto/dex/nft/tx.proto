@@ -5,9 +5,10 @@ import "amino/amino.proto";
 import "cosmos/msg/v1/msg.proto";
 import "cosmos_proto/cosmos.proto";
 import "gogoproto/gogo.proto";
-import "dex/nft/module/module.proto";
+import "dex/nft/nft.proto";
 
-option go_package = "dex/x/nft/types";
+option go_package                      = "github.com/monk07-01/dex/x/nft/types";
+option (gogoproto.goproto_getters_all) = false;
 
 
 // MsgUpdateParams is the Msg/UpdateParams request type.
@@ -21,15 +22,8 @@ message MsgUpdateParams {
   // params defines the module parameters to update.
   //
   // NOTE: All parameters must be supplied.
-  Params params = 2 [
-    (gogoproto.nullable) = false,
-    (amino.dont_omitempty) = true
-  ];
 }
 
-
-option go_package                      = "github.com/monk07-01/dex/x/nft/types";
-option (gogoproto.goproto_getters_all) = false;
 
 // Msg defines the NFT Msg service.
 service Msg {

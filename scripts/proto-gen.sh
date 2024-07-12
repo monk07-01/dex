@@ -33,5 +33,5 @@ done
 cd ..
 
 # move proto files to the right places
-cp -r github.com/monk07-01/dex/* ./
+cp -r github.com/monk07-01/dex/x/* ./
 rm -rf github.com

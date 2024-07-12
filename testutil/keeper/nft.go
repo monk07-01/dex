@@ -21,7 +21,7 @@ import (
 	"dex/x/nft/types"
 )
 
-func CoinfactoryKeeper(t testing.TB) (keeper.Keeper, sdk.Context) {
+func NftKeeper(t testing.TB) (keeper.Keeper, sdk.Context) {
 	storeKey := storetypes.NewKVStoreKey(types.StoreKey)
 
 	db := dbm.NewMemDB()

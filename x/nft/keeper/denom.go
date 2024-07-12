@@ -4,7 +4,7 @@ import (
 	sdkerrors "cosmossdk.io/errors"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/monk07-01/dex/x/coinfactory/types"
+	"github.com/monk07-01/dex/x/nft/types"
 )
 
 // HasDenomID returns whether the specified denom ID exists

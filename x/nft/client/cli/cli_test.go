@@ -18,10 +18,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/network"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/crypto-org-chain/chain-main/v4/app"
-	nftcli "github.com/crypto-org-chain/chain-main/v4/x/nft/client/cli"
-	nfttestutil "github.com/crypto-org-chain/chain-main/v4/x/nft/client/testutil"
-	nfttypes "github.com/JTG947/dex/x/coinfactory/types"
+	"github.com/monk07-01/dex/app"
+	nftcli "github.com/monk07-01/dex/x/nft/client/cli"
+	nfttestutil "github.com/monk07-01/dex/x/nft/client/testutil"
+	nfttypes "github.com/monk07-01/dex/x/nft/types"
 )
 
 type IntegrationTestSuite struct {

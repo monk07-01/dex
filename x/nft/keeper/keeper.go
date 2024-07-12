@@ -10,7 +10,7 @@ import (
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"dex/x/coinfactory/types"
+	"dex/x/nft/types"
 )
 
 type (
