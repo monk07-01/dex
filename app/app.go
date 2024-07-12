@@ -75,7 +75,7 @@ import (
 	ibctransferkeeper "github.com/cosmos/ibc-go/v8/modules/apps/transfer/keeper"
 	ibckeeper "github.com/cosmos/ibc-go/v8/modules/core/keeper"
 
-	coinfactorymodulekeeper "dex/x/coinfactory/keeper"
+	coinfactorymodulekeeper "dex/x/nft/keeper"
 	dexmodulekeeper "dex/x/dex/keeper"
 
 	// this line is used by starport scaffolding # stargate/app/moduleImport
